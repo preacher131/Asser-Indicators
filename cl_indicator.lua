@@ -79,7 +79,7 @@ Citizen.CreateThread(function()
 	while true do
 		local ped = GetVehiclePedIsIn(GetPlayerPed(-1), false)
 		if ped ~= nil and GetPedInVehicleSeat(ped, -1) == GetPlayerPed(-1) then
-			if IsControlJustPressed(1, 174) then
+			if IsControlJustPressed(1, 210) and IsControlJustPressed(1, 63) then
 				indicatorTime = 0
 				if indicator == "Left" then
 					indicator = "Off"
@@ -89,7 +89,7 @@ Citizen.CreateThread(function()
 				end
 				TriggerServerEvent("asser:syncIndicator", indicator)
 				TriggerEvent("asser:setIndicator", indicator)
-			elseif IsControlJustPressed(1, 175) then
+			elseif IsControlJustPressed(1, 210) and IsControlJustPressed(1, 148) then
 				indicatorTime = 0
 				if indicator == "Right" then
 					indicator = "Off"
@@ -99,7 +99,7 @@ Citizen.CreateThread(function()
 				end
 				TriggerServerEvent("asser:syncIndicator", indicator)
 				TriggerEvent("asser:setIndicator", indicator)
-			elseif IsControlJustPressed(1, 173) then
+			elseif IsControlJustPressed(1, 210) and IsControlJustPressed(1, 151) then
 				indicatorTime = 0
 				if indicator == "Both" then
 					indicator = "Off"
